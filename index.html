@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreStack IT - Professzionális IT Megoldások</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="NexusITPartenrs">
+            </a>    
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Főoldal</a></li>
+                    <li><a href="#services">Szolgáltatásaink</a></li>
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#contact">Kapcsolat</a></li>
+                    <li class="more-dropdown">
+                        <a href="#">Több &#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="#">Karrier</a>
+                            <a href="#">Blog</a>
+                            <a href="#">GYIK</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Keresés..." class="search-input">
+                    <button type="button" id="search-toggle" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Stabil IT Háttér a Vállalati Növekedésért</h1>
+                <p>Teljes körű informatikai megoldásokat szállítunk, a tervezéstől a megvalósításon át a hosszú távú támogatásig, hogy Ön a saját üzletére fókuszálhasson.</p>
+                <a href="#services" class="cta-button">Ismerje meg szolgáltatásainkat</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>IT Szolgáltatásaink</h2>
+                <p class="section-intro">
+                    Teljes körű, testreszabott IT megoldásokat kínálunk, amelyekkel vállalkozása stabil, biztonságos és jövőálló technológiai alapokon működhet.
+                </p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3>Hardver & Infrastruktúra</h3>
+                        <p>Munkaállomások, szerverek, hálózati eszközök és irodai berendezések beszerzése és teljes körű beüzemelése.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4a5 5 0 0 0-9 0M9 19.4V13a3 3 0 0 1 6 0v6.4M12 13V9"></path><circle cx="12" cy="5.4" r="1"></circle><circle cx="12" cy="19.4" r="1"></circle></svg>
+                        </div>
+                        <h3>Hálózat & Biztonság</h3>
+                        <p>Strukturált kábelezés, routerek, switchek konfigurálása és a vállalati hálózat informatikai biztonságának garantálása.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3>Szoftver Menedzsment</h3>
+                        <p>Operációs rendszerek telepítése, irodai és szakmai szoftverek licenceinek kezelése, valamint egyedi szoftverigények felmérése.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15c-3.5 0-6.2-2.5-7-5.5.8-3 3.5-5.5 7-5.5s6.2 2.5 7 5.5c-.8 3-3.5 5.5-7 5.5z"></path><path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1z"></path></svg>
+                        </div>
+                        <h3>5 Éves Támogatás</h3>
+                        <p>Folyamatos rendszerfelügyelet, karbantartás és felhasználói támogatás (helpdesk) a zökkenőmentes működésért.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" style="height: 500px; background: #eee; display: flex; align-items: center; justify-content: center;">
+            <div class="container">
+                <h2>Rólunk</h2>
+                <p>Hamarosan...</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Lépjen velünk kapcsolatba</h2>
+                <p class="section-intro">
+                    Kérdése van, vagy egyedi ajánlatot szeretne? Töltse ki az űrlapot, vagy keressen minket a megadott elérhetőségeken! Készen állunk, hogy segítsünk.
+                </p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3>Címünk</h3>
+                                <p>1234 Budapest, Példa utca 10.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3>Email</h3>
+                                <p>info@corestackit.hu</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3>Telefon</h3>
+                                <p>+36 1 234 5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Teljes név" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email cím" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Tárgy" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Az Ön üzenete..." rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Üzenet küldése</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Szolgáltatásaink</h4>
+                    <ul>
+                        <li><a href="#services">Hardver & Infrastruktúra</a></li>
+                        <li><a href="#services">Hálózat & Biztonság</a></li>
+                        <li><a href="#services">Szoftver Menedzsment</a></li>
+                        <li><a href="#services">5 Éves Támogatás</a></li>
+                        <li><a href="#contact">Árajánlatkérés</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Cégünkről</h4>
+                    <ul>
+                        <li><a href="#about">Rólunk</a></li>
+                        <li><a href="#">Karrier</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Partnereink</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Gyors Hivatkozások</h4>
+                    <ul>
+                        <li><a href="#">Gyakran Ismételt Kérdések</a></li>
+                        <li><a href="#">Adatvédelmi Nyilatkozat</a></li>
+                        <li><a href="#">Süti Szabályzat</a></li>
+                        <li><a href="#">Impresszum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Elérhetőség</h4>
+                    <p>
+                        Székhely: 1234 Budapest, Példa utca 10.<br>
+                        Email: <a href="mailto:info@corestackit.hu">info@corestackit.hu</a><br>
+                        Telefon: +36 1 234 5678
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo-area">
+                    <img src="images/logo.png" alt="NexusITPartenrs" class="footer-logo">
+                    <p>&copy; 2025 NexusITPartenrs. Minden jog fenntartva.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/nexusitpartners/#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg></a>
+                    <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.53,2.44C12.2,2.3,11.83,2.23,11.45,2.23C8.1,2.23,6.33,4.4,6.33,7.69V13.1C6.33,13.75,5.82,14.26,5.18,14.26C4.53,14.26,4.02,13.75,4.02,13.1V7.81H6.33V12.5C6.33,12.5,6.33,12.5,6.33,12.5C6.33,5,8.69,2.79,11.75,2.79C12.01,2.79,12.27,2.83,12.53,2.88V5.32C11.69,5.13,10.82,5.29,10.13,5.88C9.28,6.5,8.81,7.5,8.81,8.55V13.1C8.81,15.75,10.92,17.86,13.57,17.86C16.22,17.86,18.33,15.75,18.33,13.1V5.21H16.02V13.1C16.02,14.75,14.94,16.06,13.57,16.06C12.2,16.06,11.12,14.75,11.12,13.1V2.44H12.53Z"></path></svg></a>
+                    <a href="https://x.com/NexusITPartenrs" aria-label="Twitter"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.8 1.9 3.57-.7-.02-1.36-.22-1.94-.54v.05c0 2.08 1.48 3.82 3.44 4.21-.36.1-.74.15-1.12.15-.28 0-.55-.03-.81-.08.55 1.7 2.14 2.94 4.03 2.97-1.47 1.15-3.32 1.83-5.33 1.83-.35 0-.69-.02-1.03-.06 1.9 1.22 4.16 1.93 6.56 1.93 7.88 0 12.2-6.54 12.2-12.2 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const searchToggle = document.getElementById('search-toggle');
+        const searchBox = document.querySelector('.search-box');
+        const searchInput = document.querySelector('.search-input');
+
+        searchToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); 
+            searchBox.classList.toggle('active');
+            if (searchBox.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!searchBox.contains(event.target)) {
+                searchBox.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

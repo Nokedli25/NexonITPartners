@@ -1,0 +1,552 @@
+/* ===== ALAPVETŐ BEÁLLÍTÁSOK ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Sima görgetés a linkekre kattintáskor */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: -15px auto 50px auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ===== FEJLÉC ÉS NAVIGÁCIÓ ===== */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ezt a szabályt keresd meg a CSS-ben... */
+header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-decoration: none;
+    /* ÚJ: Add hozzá ezt a két sort a vertikális igazításhoz */
+    display: flex;
+    align-items: center;
+}
+
+/* ...és ADD HOZZÁ EZT AZ ÚJ SZABÁLYT alatta vagy a közelében */
+header .logo img {
+    height: 100px;  /* A logó magassága. Ezt átírhatod, ha kell. */
+    width: auto;   /* A szélesség automatikusan méreteződik */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #555;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ===== KERESŐMEZŐ STÍLUSOK ===== */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.search-input {
+    width: 0;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn svg {
+    stroke: #555;
+    transition: stroke 0.3s ease;
+}
+
+.search-btn:hover svg {
+    stroke: #007bff;
+}
+
+.search-box.active .search-input {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
+    padding-right: 10px;
+}
+
+/* ===== "TÖBB" LEGÖRDÜLŐ MENÜ ===== */
+.more-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.more-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 30px;
+    left: 0;
+}
+
+.more-dropdown .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: 400;
+}
+
+.more-dropdown .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.more-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ===== HERO SZEKCIÓ (FŐOLDAL) ===== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #333 url('images/hero-bg.webp') no-repeat center center/cover; /* Itt van az új kép útvonala! */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    text-decoration: none;
+}
+
+/* ===== SZOLGÁLTATÁSOK SZEKCIÓ STÍLUSAI ===== */
+#services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service-item {
+    flex-basis: 22%;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-icon svg {
+    color: #007bff;
+    width: 48px;
+    height: 48px;
+}
+
+.service-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.service-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== KAPCSOLAT SZEKCIÓ STÍLUSAI ===== */
+#contact {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.info-icon svg {
+    color: #007bff;
+    width: 28px;
+    height: 28px;
+}
+
+.info-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+}
+
+.info-text p {
+    margin: 0;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ===== LÁBLÉC STÍLUSOK ===== */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    padding: 60px 0 20px 0;
+    margin-top: 0;
+    text-align: left;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #bdc3c7;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column p {
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-area {
+    display: flex;
+    align-items: center;
+}
+
+/* ADD HOZZÁ EZT AZ ÚJ SZABÁLYT */
+.footer-logo {
+    height: 140px; /* A lábléc logó magassága, ez általában kisebb */
+    width: auto;
+    margin-right: 20px;
+}
+
+.footer-logo-area p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: #bdc3c7;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .service-item {
+        flex-basis: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+        width: 100%;
+    }
+    header nav ul li {
+        margin: 8px 0;
+    }
+    .search-box {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .more-dropdown .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40px;
+    }
+    .service-item {
+        flex-basis: 100%;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .footer-grid {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo-area {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .footer-logo-placeholder {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+    .social-links a {
+        margin: 0 10px;
+    }
+}
